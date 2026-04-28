@@ -151,19 +151,19 @@ function showGameDialog(game) {
   dialog.showModal();
 }
 
-window.addEventListener("scroll", function () {
-  const image = document.querySelector(".header-image");
+//window.addEventListener("scroll", function () {
+  //const image = document.querySelector(".header-image");
 
-  const scrollY = window.scrollY;
-  const fadeStart = 0;
-  const fadeEnd = 300; // hvor hurtigt den forsvinder
+  //const scrollY = window.scrollY;
+ // const fadeStart = 0;
+  //const fadeEnd = 300; // hvor hurtigt den forsvinder
 
-  let opacity = 1 - scrollY / fadeEnd;
+  //let opacity = 1 - scrollY / fadeEnd;
 
-  if (opacity < 0) opacity = 0;
+  //if (opacity < 0) opacity = 0;
 
-  image.style.opacity = opacity;
-});
+  //image.style.opacity = opacity;
+//});
 
 let currentSlide = 0;
 
