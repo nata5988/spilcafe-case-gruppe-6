@@ -20,6 +20,7 @@ function initApp() {
     .addEventListener("change", applyFiltersAndSort);
 
   getGames();
+  startHeroSlider();
 }
 
 async function getGames() {
@@ -178,7 +179,7 @@ function startHeroSlider() {
     slides[currentSlide].classList.add("active");
   }, 4000); // skifter hver 4 sek
 }
-startHeroSlider();
+
 
 function makeHeroClickable() {
   const slides = document.querySelectorAll(".hero-slide");
