@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="shortcut icon" href="https://images.squarespace-cdn.com/content/v1/61fd2c9026a58c435d260f4c/1af90772-e642-4309-a2cb-f4161e36855e/SC-logo-2023-transparant-BG+Small+Crop.png?format=1500w" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+  <header>
+    <h1>Spiloversigt</h1>
+    <p>Se hele vores samling af brætapil.</p>
+    <img src="https://images.squarespace-cdn.com/content/v1/61fd2c9026a58c435d260f4c/a9104401-e768-4705-9af6-7a849b84ee5d/IMG20250704190926.jpg" alt="stemningsbillede fra Brætspilscafeen, hvor en gruppe mennesker spiller et brætspil og har det sjovt sammen." class="header-image">
+  </header>  
+  
+<section class="hero">
+  <div class="hero-slider">
+    <img src="Img/hint.png" alt="Hint spil" class="hero-slide active" />
+    <img src="Img/daarlige-selskab.png" alt="Det Dårlige Selskab" class="hero-slide" />
+    <img src="Img/hint.png" alt="Hint spil" class="hero-slide active" />
+    <img src="Img/daarlige-selskab.png" alt="Det Dårlige Selskab" class="hero-slide" />
+  </div>
+
+  <div class="hero-content">
+    <h1>Populære spil</h1>
+    <p>Opdag de mest spillede spil i caféen</p>
+  </div>
+</section>
+
+    <main>
+      <section class="controls">
+        <div class="control-group">
+          <label for="search-input">Søg på spil</label>
+          <input type="text" id="search-input" placeholder="Fx Catan, Uno eller Ludo" />
+        </div>
+
+        <div class="control-group">
+          <label for="genre-select">Genre</label>
+          <select id="genre-select">
+            <option value="all">Alle genrer</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sort-select">Sortering</label>
+          <select id="sort-select">
+            <option value="none">Ingen sortering</option>
+            <option value="title">Titel (A-Å)</option>
+            <option value="year">Årstal (nyeste først)</option>
+            <option value="rating">Rating (højeste først)</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="status-bar">
+        <p id="movie-count">Viser 0 film</p>
+      </section>
+
+      <section id="movie-list" class="movie-grid">
+        <p class="loading">Loader film...</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Gruppe 6 - Spilcafe case</p>
+    </footer>
+
+    <!-- Game Detail Dialog -->
+    <dialog id="movie-dialog">
+      <form method="dialog">
+        <button id="close-dialog" aria-label="Luk">✕</button>
+        <div id="dialog-content">
+          <!-- Spildetaljer indsættes her via JavaScript -->
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
