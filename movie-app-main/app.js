@@ -20,7 +20,6 @@ function initApp() {
     .addEventListener("change", applyFiltersAndSort);
 
   getGames();
-  startHeroSlider();
 }
 
 async function getGames() {
@@ -29,6 +28,7 @@ async function getGames() {
 
   populateGenreSelect();
   applyFiltersAndSort();
+  showPopularGames();
 }
 
 function populateGenreSelect() {
@@ -98,6 +98,42 @@ function showGames(games) {
     showGame(game);
   }
 }
+function showPopularGames() {
+  const popularGamesContainer = document.querySelector("#popular-games");
+
+  const popularGames = allGames
+    .filter((game) => game.rating > 4.2)
+    .sort((gameA, gameB) => gameB.rating - gameA.rating)
+    .slice(0, 4);
+
+  popularGamesContainer.innerHTML = "";
+
+  for (const game of popularGames) {
+    const gameCard = /*html*/ `
+      <article class="movie-card popular-card" tabindex="0">
+        <img src="${game.image}" alt="Billede af ${game.title}" class="movie-poster" />
+        <div class="movie-info">
+          <div class="title-row">
+            <h2>${game.title}</h2>
+            <span class="year-badge">${game.age}+</span>
+          </div>
+          <p class="genre">${game.genre}</p>
+          <p class="movie-rating">⭐ ${game.rating}</p>
+          <p><strong>Spilletid:</strong> ${game.playtime} min.</p>
+        </div>
+      </article>
+    `;
+
+    popularGamesContainer.insertAdjacentHTML("beforeend", gameCard);
+  }
+
+  const cards = popularGamesContainer.querySelectorAll(".movie-card");
+  cards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      showGameDialog(popularGames[index]);
+    });
+  });
+}
 
 function showGame(game) {
   const gameCard = /*html*/ `
@@ -151,47 +187,3 @@ function showGameDialog(game) {
 
   dialog.showModal();
 }
-
-//window.addEventListener("scroll", function () {
-  //const image = document.querySelector(".header-image");
-
-  //const scrollY = window.scrollY;
- // const fadeStart = 0;
-  //const fadeEnd = 300; // hvor hurtigt den forsvinder
-
-  //let opacity = 1 - scrollY / fadeEnd;
-
-  //if (opacity < 0) opacity = 0;
-
-  //image.style.opacity = opacity;
-//});
-
-let currentSlide = 0;
-
-function startHeroSlider() {
-  const slides = document.querySelectorAll(".hero-slide");
-
-  setInterval(() => {
-    slides[currentSlide].classList.remove("active");
-
-    currentSlide = (currentSlide + 1) % slides.length;
-
-    slides[currentSlide].classList.add("active");
-  }, 4000); // skifter hver 4 sek
-}
-
-
-function makeHeroClickable() {
-  const slides = document.querySelectorAll(".hero-slide");
-
-  slides[0].addEventListener("click", () => {
-    const game = allGames.find((g) => g.title === "Hint");
-    if (game) showGameDialog(game);
-  });
-
-  slides[1].addEventListener("click", () => {
-    const game = allGames.find((g) => g.title === "Det Dårlige Selskab");
-    if (game) showGameDialog(game);
-  });
-}
-makeHeroClickable();

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spilcafeen</title>
+    <title>Spilcaféen</title>
     <link rel="stylesheet" href="app.css" />
     <link rel="shortcut icon" href="https://images.squarespace-cdn.com/content/v1/61fd2c9026a58c435d260f4c/1af90772-e642-4309-a2cb-f4161e36855e/SC-logo-2023-transparant-BG+Small+Crop.png?format=1500w" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&display=swap" rel="stylesheet" />
   </head>
 
   <body>
-<header class="navbar">
+<nav class="navbar">
   <img id="logo" src="Img/spilcafe-logo.webp" alt="logo">
    <ul>
     <li><a href="#">Reservér bord</a></li>
@@ -19,27 +19,26 @@
     <li><a id="spiloversigt" href="#">Spiloversigt</a></li>
   </ul>
   <img id="profil-vektor" src="img/profil-vector.png" alt="proil vektor">
-</header>
+</nav> 
 
-  <header>
-    <h1>Spiloversigt</h1>
-    <p class="subtitle">Se hele vores samling af brætspil.</p>
-    <ul>
-      <li></li>
-      
-    </ul>
-    <img src="Img/baggrund12.png" class="header-image">
-  </header>  
+  <header class="hero-header">
+  <div class="hero-row">
+    <div class="hero-text">
+      <h1>SPILOVERSIGT</h1>
+      <p class="subtitle">Se hele vores samling af brætspil</p>
+    </div>
+
+    <img class="hero-side-image" src="Img/spilbillede2.png" alt="Brætspil">
+  </div>
+</header>
   
 <section class="hero">
   <div class="hero-content">
     <h2>Populære spil</h2>
-    <p>Opdag de mest spillede spil i caféen</p>
+    <p id="hero-subconetent">Opdag de mest spillede spil i caféen</p>
   </div>
 
-  <div class="hero-slider" id="hero-slider">
-    <!-- JS indsætter kort -->
-  </div>
+  <div id="popular-games" class="popular-games-row"></div>
 </section>
 
     <main>

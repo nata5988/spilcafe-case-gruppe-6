@@ -3,8 +3,8 @@
   --clr-not-available: #E63E24;
   --text-light: #FFFFFF;
   --text-dark: #000000;
-  --bg-clr: #f4e8b7;
-  --card-bg: #EFE3D8;
+  --bg-clr: #FFEDD5;
+  --card-bg: white;
   --red-clr: #BE191C;
   --font-fam-headline: "Luckiest Guy";
   --font-fam-txt-body: "Open Sans";
@@ -21,6 +21,7 @@
   justify-content: space-between;
   padding: 20px 40px;
   height: 110px;
+  color:#f4e8b7;
 }
 
 .navbar ul {
@@ -66,21 +67,42 @@ body {
 }
 
 header {
-  background: var(--bg-clr);
+  background:linear-gradient(to right, #7db7d9, #FFEDD5);
   text-align: center;
   overflow: hidden; /* vigtig! */
   position: relative;
-  padding: 20rem 0 20rem;
+  padding: 8rem 0 0rem;
 }
 
 header h1 {
   font-size: 100px;
-  color: white;
+  color: var(--red-clr);
   font-family: var(--font-fam-headline);
   position: relative;
   text-align: left;
-  padding-left: 1%;
+  padding-left: 8.5%;
+  padding-top: 20%;
   z-index: 3;
+
+}
+
+.hero-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.hero-text {
+  max-width: 55%;
+}
+
+.hero-side-image {
+  width: 550px;
+  height: auto;
+ position: relative;
+  transform: translateY(-60px);
+  padding-right: 10%;
 }
 
 header h1,
@@ -95,73 +117,84 @@ header h1,
   margin-top: 0.4rem;
   position:relative;
   text-align: left;
-  padding-left: 1%;
+  padding-left: 8.5%;
   z-index: 3;
-  font-family: var(--font-fam-txt-body);
+  font-family: var(--font-fam-headline);
  font-size: 30px;
- font-weight: 50;
-}
-
-.header-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  z-index: 0;
-}
-
-
-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(244, 232, 183, 0) 60%,   /* gennemsigtigt (viser billede) */
-    var(--bg-clr) 100%            /* din baggrund */
-  );
+ font-weight: lighter;
 }
 
 .hero {
    padding: 2rem 1rem;
 }
 
-/* slider container */
-.hero-slider {
-  position: absolute;
-  inset: 0;
+.popular-games-row {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem 7.5rem;
 }
 
-/*billeder */
-.hero-slide {
-  position: absolute;
-  inset: 0;
+.popular-card {
+  width: 250px!important;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  color: black;
+}
 
+.popular-card .movie-poster {
   width: 100%;
-  height: 100%;
-
+  height: 250px;
   object-fit: cover;
-
-  opacity: 0;
-  transition: opacity 1s ease;
+  display: block;
 }
 
-/* aktivt billede */
-.hero-slide.active {
-  opacity: 1;
+.popular-card .movie-info {
+  padding: 0.8rem;
 }
-.hero-slide:hover {
-  transform: scale(1.1);
+
+.popular-card .movie-info h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.popular-card .genre {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.popular-card .movie-rating {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 700px) {
+  .popular-card {
+    width: 100%;
+  }
 }
 
 /* tekst ovenpå */
 .hero-content {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   color: var(--red-clr);
+  margin-top: -13px;
+  padding-left: 8.5%;
+}
+.hero-content h2{
+  font-size: 50px;
+  margin-bottom: 1%;
+  font-family: var(--font-fam-txt-body);
+  font-weight:bold
+
+}
+
+.hero-content #hero-subconetent{
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 
@@ -262,7 +295,6 @@ main {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 0.8rem;
   margin-bottom: 3rem;
-  margin-top: 3rem;
   color: var(--text-light);
 }
 
