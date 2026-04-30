@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", initApp);
 /*comment for at  kunne comitte*/
 
 const GAMES_URL =
-  "https://raw.githubusercontent.com/cederdorff/race/refs/heads/master/data/games.json";
+  "./spilcafe.json";
 let allGames = [];
 
 function initApp() {

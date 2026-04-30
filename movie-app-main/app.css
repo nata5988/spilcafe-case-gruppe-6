@@ -177,7 +177,6 @@ header h1,
   }
 }
 
-/* tekst ovenpå */
 .hero-content {
   margin-bottom: 0rem;
   color: var(--red-clr);
@@ -280,7 +279,7 @@ main {
 
 .genre {
   font-size: 0.8rem;
-  color: #d5e5f1;
+  color: black;
   margin-top: 0.3rem;
 }
 
@@ -389,8 +388,7 @@ dialog#movie-dialog {
   padding: 0;
   border: 1px solid rgba(105, 200, 240, 0.24);
   border-radius: 14px;
-  background: #d1ceae;
-  color: var(--text-light);
+  background: #FFF6E1;
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6);
   overflow: hidden;
   position: fixed;
@@ -421,7 +419,7 @@ dialog#movie-dialog form {
   border-radius: 999px;
   border: 1px solid rgba(105, 200, 240, 0.35);
   background: rgba(12, 17, 26, 0.75);
-  color: var(--text-light);
+  color: black;
   font-size: 1.1rem;
   cursor: pointer;
   display: grid;
@@ -478,7 +476,7 @@ dialog#movie-dialog form {
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   background: rgba(105, 200, 240, 0.18);
-  color: rgba(105, 200, 240, 0.18);
+  color:black;
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -490,7 +488,7 @@ dialog#movie-dialog form {
 }
 
 #dialog-content p strong {
-  color: var(--text-light);
+  color: black;
 }
 
 #dialog-content .movie-genre {
@@ -501,11 +499,11 @@ dialog#movie-dialog form {
 .movie-description {
   margin-top: 0.45rem !important;
   padding: 0.9rem;
-  background: rgba(105, 200, 240, 0.08);
-  border: 1px solid rgba(105, 200, 240, 0.2);
+  background: #FFF0CF;
+  border: 1px solid black;
   border-left: 4px solid var(--accent);
   border-radius: 10px;
-  color: var(--text-light) !important;
+  color: black !important;
 }
 
 @media (max-width: 768px) {
