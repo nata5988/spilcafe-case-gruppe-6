@@ -533,7 +533,7 @@ dialog#movie-dialog form {
 
 #movie-count {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: rgb(147, 61, 61);
   font-weight: 700;
 }
 
