@@ -426,7 +426,7 @@
   },
   {
     "id": 26,
-    "title": "Stardew Valley - The Board Game",
+    "title": "Stardew Valley",
     "description": "Byg din gård, dyrk afgrøder, og udforsk Stardew Valley!",
     "image": "https://cf.geekdo-images.com/X1oNtZV5H5BxtxlsTGIsHA__itemrep@2x/img/aeiA5_b0pt8chca4nl0nUPE6P5Q=/fit-in/492x600/filters:strip_icc()/pic6037615.png",
     "genre": "Theme",
@@ -445,7 +445,7 @@
     "id": 27,
     "title": "HINT",
     "description": "Tegn, nyn, tal og mim dine svar, ét hint ad gangen.",
-    "image": "https://raw.githubusercontent.com/cederdorff/race/master/images/games/secret-hitler.webp",
+    "image": "https://cf.geekdo-images.com/1Ebkya5qKEm0SWGiAI20DA__itemrep@2x/img/r2s4Lxxp_tMF9e8RKY7bGxhM7PA=/fit-in/492x600/filters:strip_icc()/pic6164116.jpg",
     "genre": "Party",
     "playtime": 50,
     "players": { "min": 4, "max": 10 },
@@ -477,7 +477,7 @@
   },
   {
     "id": 29,
-    "title": "Betrayal at House on the Hill - 3rd Edition",
+    "title": "Betrayal at House on the Hill",
     "description": "Udforsk et hjemsøgt hus som et hold ... indtil en af ​​jer vender jer mod resten.",
     "image": "https://cf.geekdo-images.com/nLDGtbwdSC0eYKffjYzrnQ__itemrep/img/YBFCbauH6KZYrQHIwdaxFku0EtQ=/fit-in/246x300/filters:strip_icc()/pic6917219.jpg",
     "genre": "Adventure",

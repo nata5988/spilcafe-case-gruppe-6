@@ -2,10 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", initApp);
 
-/*comment for at  kunne comitte*/
+/*comment for at kunne comitte*/
 
-const GAMES_URL =
-  "./spilcafe.json";
+const GAMES_URL = "./spilcafe.json";
 let allGames = [];
 
 function initApp() {
@@ -98,6 +97,7 @@ function showGames(games) {
     showGame(game);
   }
 }
+
 function showPopularGames() {
   const popularGamesContainer = document.querySelector("#popular-games");
 
@@ -187,3 +187,13 @@ function showGameDialog(game) {
 
   dialog.showModal();
 }
+
+const slider = document.querySelector(".popular-games-row");
+
+document.querySelector("#next").addEventListener("click", () => {
+  slider.scrollBy({ left: 300, behavior: "smooth" });
+});
+
+document.querySelector("#prev").addEventListener("click", () => {
+  slider.scrollBy({ left: -300, behavior: "smooth" });
+});

@@ -71,45 +71,46 @@ header {
   text-align: center;
   overflow: hidden; /* vigtig! */
   position: relative;
-  padding: 8rem 0 0rem;
+  padding: 8rem 0rem 0rem;
 }
 
 header h1 {
-  font-size: 100px;
+  font-size: 90px;
   color: var(--red-clr);
   font-family: var(--font-fam-headline);
   position: relative;
-  text-align: left;
-  padding-left: 8.5%;
-  padding-top: 20%;
   z-index: 3;
-
 }
 
 .hero-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 5rem;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem; 
+  flex-wrap: wrap;
 }
 
 .hero-text {
-  max-width: 55%;
+  max-width: 600px;
+  flex: 1 1 400px;
+  width: 50%;
 }
 
 .hero-side-image {
   width: 550px;
   height: auto;
  position: relative;
-  transform: translateY(-60px);
-  padding-right: 10%;
+  flex: 1 1 400px;
+  max-width: 100%;
 }
 
 header h1,
 .subtitle {
-  position: relative;
   z-index: 2;
-  bottom: 160px;
+  bottom: 0;
 }
 
 .subtitle {
@@ -117,7 +118,7 @@ header h1,
   margin-top: 0.4rem;
   position:relative;
   text-align: left;
-  padding-left: 8.5%;
+  padding-left: 0;
   z-index: 3;
   font-family: var(--font-fam-headline);
  font-size: 30px;
@@ -125,14 +126,24 @@ header h1,
 }
 
 .hero {
-   padding: 2rem 1rem;
+   padding: 2rem 0rem;
 }
 
 .popular-games-row {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
+
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory;
+
   flex-wrap: wrap;
-  padding: 2rem 7.5rem;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: min(1200px, 94vw);
+
+  -webkit-overflow-scrolling: touch;
 }
 
 .popular-card {
@@ -142,10 +153,16 @@ header h1,
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   color: black;
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+}
+
+.popular-games-row::-webkit-scrollbar {
+  display: none;
 }
 
 .popular-card .movie-poster {
-  width: 100%;
+  
   height: 250px;
   object-fit: cover;
   display: block;
@@ -178,13 +195,15 @@ header h1,
 }
 
 .hero-content {
-  margin-bottom: 0rem;
   color: var(--red-clr);
   margin-top: -13px;
-  padding-left: 8.5%;
+  padding-left: 0;
+  max-width: 1200px; 
+  margin: 0 auto;
+  align-items: flex-start
 }
 .hero-content h2{
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 1%;
   font-family: var(--font-fam-txt-body);
   font-weight:bold
@@ -483,12 +502,12 @@ dialog#movie-dialog form {
 
 #dialog-content p {
   margin: 0;
-  color: rgba(0, 0, 0, 0.18);
+  color: black;
   line-height: 1.55;
 }
 
 #dialog-content p strong {
-  color: black;
+  color: var(--red-clr);
 }
 
 #dialog-content .movie-genre {
@@ -576,4 +595,15 @@ footer {
   .movie-card .movie-poster {
     height: 300px;
   }
+}
+
+.popular-swiper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--red-clr);
 }
